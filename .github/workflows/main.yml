@@ -18,19 +18,22 @@ jobs:
     steps:    
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!   
+      #Installerar faker
+      - name: Install Faker
+        run: pip install faker
 
-      - name: Pip
-        run: pip install Faker  
-
-      - name: Run a one-line script
-        run: echo Hello, world!  
-        
-      # lägg till create csv file (glöm inte pip install)
+      # lägg till create csv file
+      - name: Run create csv file
+        run: python generate.py
+      
       # lägg till Create JSON file
-      # Köra ehnetstester      
+      - name: Run JSON file
+        run: python csvtojson.py
+
+      # Köra enhetestester    
+      - name: Testing
+        run: python Tests.py
+        
       - name: Copy to dist
         run: |
           mkdir dist
