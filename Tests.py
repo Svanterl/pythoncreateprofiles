@@ -16,25 +16,6 @@ class TestFileContents(unittest.TestCase):
             rows = list(reader)
             self.assertTrue(len(rows) >= 900)
 
-    # def test_json_properties(self):
-    #     with open('data.json', 'r') as file:
-    #         data = json.load(file)
-    #         expected_properties = [
-    #             "Givenname",
-    #             "Surname",
-    #             "Streetaddress",
-    #             "City",
-    #             "Zipcode",
-    #             "Country",
-    #             "CountryCode",
-    #             "NationalId",
-    #             "TelephoneCountryCode",
-    #             "Telephone",
-    #             "Birthday",
-    #             "ConsentToContact"
-    #         ]
-    #         self.assertTrue(all(prop in data for prop in expected_properties))
-
     def test_json_properties(self):
         with open('data.json', 'r') as file:
             data = json.load(file)
