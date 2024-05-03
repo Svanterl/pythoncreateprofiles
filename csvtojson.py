@@ -12,8 +12,8 @@ def csv_to_json(csv_file, json_file):
         json.dump(data, file, indent=4, ensure_ascii=False)
 
 # Ange sökvägen till CSV- och JSON-filerna
-csv_file = r'C:\Users\svant\OneDrive\Skrivbord\Svante\Projekt\pyhtoncreateprofiles-main\profiles1.csv'
-json_file = r'C:\Users\svant\OneDrive\Skrivbord\Svante\Projekt\pyhtoncreateprofiles-main\data.json'
+csv_file = r'C:\Users\svant\OneDrive\Skrivbord\Svante\csvtojson\profiles1.csv'
+json_file = r'C:\Users\svant\OneDrive\Skrivbord\Svante\csvtojson\data.json'
 
 # Konvertera CSV till JSON
 csv_to_json(csv_file, json_file)
