@@ -8,7 +8,7 @@ class TestFileContents(unittest.TestCase):
         with open('profiles1.csv', 'r') as file:
             reader = csv.reader(file)
             columns = next(reader)
-            self.assertEqual(len(columns), 12)
+            self.assertEqual(len(columns), 13)
 
     def test_csv_rows(self):
         with open('profiles1.csv', 'r') as file:
